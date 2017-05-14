@@ -10,6 +10,7 @@ namespace LP2TP
     {
         static void Main(string[] args)
         {
+            int a = 10;
         }
     }
 }
