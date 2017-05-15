@@ -2,7 +2,8 @@
 
 namespace TPBO
 {
-    public class Class1
+    public class Projeto
     {
+
     }
 }
