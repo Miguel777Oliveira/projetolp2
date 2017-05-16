@@ -30,6 +30,27 @@ namespace TPDL
             return result;
         }
 
+        
+        public bool Removeprojeto (Projeto proj, out string mensagem)
+        {
+
+            try
+            {
+                if (gereProjeto.Contains(proj))
+                {
+                    proj.SituacaoRelativaAoProjeto = EstadoProjeto.Removido; // marcado como removido
+                    result = true;
+                }
+            }
+            catch (ImposssivelAdicionarUtilizador ex)
+            {
+                msg = ex.Message;
+                result = false;
+            }
+            mensagem = msg;
+            return result;
+        }
+        
 
         public bool ConsultaProjeto(Projeto p, out string mensagem)
         {
@@ -66,16 +87,7 @@ namespace TPDL
             return projetoDevolvido;
         }
 
-        /*
-        public AdicionaProjeto(GereProjeto p)
-        {
-            try
-            {
-
-            }
-            catch ()
-        }
-        }*/
+     
 
 
 

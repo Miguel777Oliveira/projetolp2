@@ -3,13 +3,20 @@ using System.Collections.Generic;
 
 namespace TPBO
 {
+    public enum EstadoProjeto
+    {
+        Removido,
+        NaoRemovido,
+        Suspenso,
+        Finalizado,
+    }
     public class Projeto
     {
 
         List<Trabalhador> conjUtilizadores;
         List<Tarefa> conjTarefas;
         Responsavel responsavel;
-
+        EstadoProjeto situacao;
 
         public Projeto()
         {
@@ -27,6 +34,12 @@ namespace TPBO
         {
             get { return conjUtilizadores; }
             set { conjUtilizadores = value; }
+        }
+
+        public EstadoProjeto SituacaoRelativaAoProjeto
+        {
+            get { return situacao; }
+            set { situacao = value; }
         }
     }
 }

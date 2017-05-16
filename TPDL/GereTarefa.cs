@@ -38,6 +38,7 @@ namespace TPDL
             {
                 if (gereTarefa.Contains(t))
                 {
+                    t.SituacaoRelativaATarefa = EstadoTarefa.Removida;
                     result = true;
                 }
             }
