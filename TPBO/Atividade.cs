@@ -4,13 +4,15 @@ using System.Text;
 
 namespace TPBO
 {
-    class Tarefa
+    class Atividade
     {
-        List<Atividade> listAtividades;
-        List<Trabalhador> listTrabalhador;
+
+        DateTime dtInicio;
 
 
+        public Atividade()
+        {
 
-
+        }
     }
 }

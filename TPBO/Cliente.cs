@@ -4,13 +4,9 @@ using System.Text;
 
 namespace TPBO
 {
-    class Tarefa
+    class Cliente
     {
-        List<Atividade> listAtividades;
-        List<Trabalhador> listTrabalhador;
-
-
-
+        int numCliente;
 
     }
 }

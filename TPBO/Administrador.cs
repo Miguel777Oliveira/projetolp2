@@ -4,13 +4,9 @@ using System.Text;
 
 namespace TPBO
 {
-    class Tarefa
+    class Administrador
     {
-        List<Atividade> listAtividades;
-        List<Trabalhador> listTrabalhador;
 
-
-
-
+            
     }
 }
