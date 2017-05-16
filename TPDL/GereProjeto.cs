@@ -7,7 +7,7 @@ namespace TPDL
     {
 
         List<Projeto> gereProjeto;
-        bool result = true;
+        bool result = false;
         string msg;
 
         public GereProjeto() { }
@@ -19,7 +19,7 @@ namespace TPDL
             try
             {
                 gereProjeto.Add(p);
-                
+                result = true;
             }
             catch(Exception ex)
             {

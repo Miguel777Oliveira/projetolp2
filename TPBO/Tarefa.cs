@@ -51,6 +51,7 @@ namespace TPBO
         {
             get { return estTarefa; }
             set { estTarefa = value; }
+        }
 
     }
 }

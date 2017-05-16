@@ -8,7 +8,7 @@ namespace TPDL
     {
 
         List<Tarefa> gereTarefa;
-        bool result = true; //Retoma resultado de cada metodo bool
+        bool result = false; //Retoma resultado de cada metodo bool
         string msg;
 
         public GereTarefa () { }
@@ -19,8 +19,29 @@ namespace TPDL
             try
             {
                 gereTarefa.Add(t);
+                result = true;
             }
             catch(Exception ex)
+            {
+                msg = ex.Message;
+                result = false;
+            }
+            mensagem = msg;
+            return result;
+        }
+
+
+        public bool RemoveTarefa(Tarefa t, out string mensagem)
+        {
+
+            try
+            {
+                if (gereTarefa.Contains(t))
+                {
+                    result = true;
+                }
+            }
+            catch(ImposssivelAdicionarUtilizador ex)
             {
                 msg = ex.Message;
                 result = false;
