@@ -4,13 +4,19 @@ using System.Text;
 
 namespace TPBO
 {
-    class Atividade
+    public class Atividade
     {
 
         DateTime dtInicio;
+        string descricao;
+        bool atividadeconcluida;
 
 
         public Atividade()
+        {
+
+        }
+        public Atividade(DateTime dtInicioAtivid, string observacao, bool estaFin)
         {
 
         }
