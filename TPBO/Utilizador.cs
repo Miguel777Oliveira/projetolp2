@@ -21,7 +21,7 @@ namespace TPBO
     }
 
 
-    class Utilizador
+    public class Utilizador
     {
         string nomeCompleto;
         char genero;

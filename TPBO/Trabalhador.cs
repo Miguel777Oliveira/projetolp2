@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TPBO
 {
-    class Trabalhador:Utilizador
+    public class Trabalhador:Utilizador
     {
         int identificacaoTrabalhador;
         DateTime dtInicioContrato;

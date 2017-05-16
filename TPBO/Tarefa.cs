@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TPBO
 {
-    class Tarefa
+    public class Tarefa
     {
         List<Atividade> listAtividades;
         List<Trabalhador> listTrabalhador;

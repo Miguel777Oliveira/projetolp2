@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TPBO
 {
-    class Responsavel:Trabalhador
+    public class Responsavel:Trabalhador
     {
         DateTime dtAtribuicaoResp; // Data de atribuicao de responsabilidade a este utilizador
 

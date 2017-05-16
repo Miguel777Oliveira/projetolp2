@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TPBO
 {
-    class Projeto
+    public class Projeto
     {
 
         List<Trabalhador> conjUtilizadores;
@@ -15,11 +15,18 @@ namespace TPBO
         {
 
         }
+        
         public Projeto(List<Trabalhador> conUtilizadores, List<Tarefa> conTarefas, Responsavel pessoaResp)
         {
             conjUtilizadores = conUtilizadores;
             conjTarefas = conTarefas;
             responsavel = pessoaResp;
+        }
+        
+        public List<Trabalhador> ListaTrabalhadores
+        {
+            get { return conjUtilizadores; }
+            set { conjUtilizadores = value; }
         }
     }
 }

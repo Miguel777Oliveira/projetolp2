@@ -5,12 +5,12 @@ using System.Text;
 namespace TPBO
 {
 
-    enum TipoHorario
+    public enum TipoHorario
     {
         Laboral,
         PosLaboral,
     }
-    class Horario
+    public class Horario
     {
 
 
@@ -24,12 +24,15 @@ namespace TPBO
         }
 
 
-        public Horario (TipoHorario genero, DateTime dtInicio, DateTime dtFim)
+        public Horario(TipoHorario genero, DateTime dtInicio, DateTime dtFim)
         {
             generoHorarioAplicado = genero;
             dthoraInicioHorario = dtInicio;
             dthoraFimHorario = dtFim;
         }
+
+
+        //property
 
     }
 }
