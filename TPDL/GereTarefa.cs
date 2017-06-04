@@ -2,22 +2,25 @@
 using System.Collections.Generic;
 using System.Text;
 using TPBO;
+
 namespace TPDL
 {
     public class GereTarefa
     {
 
-        List<Tarefa> gereTarefa;
-        bool result = false; //Retoma resultado de cada metodo bool
-        string msg;
+       static List<Tarefa> gereTarefa;
+       static bool result = false; //Retoma resultado de cada metodo bool
+       static string msg;
 
         public GereTarefa () { }
 
 
-        public bool AdicionaTarefa (Tarefa t,out string mensagem)
+        public static bool AdicionaTarefa (Tarefa t,out string mensagem)
         {
+            
             try
             {
+                //if ()
                 gereTarefa.Add(t);
                 result = true;
             }
@@ -31,7 +34,7 @@ namespace TPDL
         }
 
 
-        public bool RemoveTarefa(Tarefa t, out string mensagem)
+        public static bool RemoveTarefa(Tarefa t, out string mensagem)
         {
 
             try
@@ -50,8 +53,28 @@ namespace TPDL
             mensagem = msg;
             return result;
         }
-            
+        public static bool ConsultarTarefa(Tarefa t, out string mensagem)
+        {
+            string msgI = string.Empty;
+            try
+            {
+                if (gereTarefa.Contains(t))
+                { 
+                    result = true;
+                    
+                }
+            }
+            catch (ImposssivelAdicionarUtilizador ex)
+            {
+                msgI = ex.Message;
+                result = false;
+            }
+            mensagem = msgI;
+            return result;
 
+           
+        }
         
+
     }
 }

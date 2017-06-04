@@ -14,7 +14,7 @@ namespace TPBO
         List<Atividade> listAtividades;
         List<Trabalhador> listTrabalhador;
         DateTime horaInicioTarefa;
-        //atributo
+        DateTime horaFimTarefa;
         EstadoTarefa estTarefa;
         
         
@@ -23,11 +23,12 @@ namespace TPBO
         {
 
         }
-        public Tarefa (List<Atividade> listAct, List<Trabalhador> trabalhadores, DateTime dtInicioTar)
+        public Tarefa (List<Atividade> listAct, List<Trabalhador> trabalhadores, DateTime dtInicioTar, DateTime dtFimTar)
         {
             listAtividades = listAct;
             listTrabalhador = trabalhadores;
             horaInicioTarefa = dtInicioTar;
+            horaFimTarefa = dtFimTar;
         }
 
         public List<Atividade> ConjuntoAtividade
@@ -46,7 +47,11 @@ namespace TPBO
             set { horaInicioTarefa = value; }
         }
 
-        //property
+        public DateTime FimTarefa
+        {
+            get { return horaFimTarefa; }
+            set { horaFimTarefa = value; }
+        }
         public EstadoTarefa SituacaoRelativaATarefa
         {
             get { return estTarefa; }

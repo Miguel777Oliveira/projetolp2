@@ -31,8 +31,21 @@ namespace TPBO
             dthoraFimHorario = dtFim;
         }
 
-
-        //property
+        public TipoHorario GereroHorario
+        {
+            get { return generoHorarioAplicado; }
+            set { generoHorarioAplicado = value; }
+        }
+        public DateTime DataInicio
+        {
+            get { return dthoraInicioHorario; }
+            set { dthoraInicioHorario = value; }
+        }
+        public DateTime DataFim
+        {
+            get { return dthoraFimHorario; }
+            set { dthoraFimHorario = value; }
+        }
 
     }
 }

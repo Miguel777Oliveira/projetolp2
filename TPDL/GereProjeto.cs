@@ -24,7 +24,7 @@ namespace TPDL
             catch(Exception ex)
             {
                 msg = ex.Message;
-                result = false;
+                //result = false;
             }
             mensagem = msg;
             return result;
@@ -56,13 +56,14 @@ namespace TPDL
         {
             try
             {
-                gereProjeto.Contains(p);
-                
+                if(gereProjeto.Contains(p)) // se lista contem p
+                    result = true; // retomo verdadeiro
+
+
             }
             catch (Exception ex)
             {
                 msg = ex.Message;
-                result = false;
             }
             mensagem = msg;
             return result;

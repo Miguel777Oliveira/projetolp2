@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TPBO
 {
-    public class Trabalhador:Utilizador
+    public class Trabalhador : Utilizador
     {
         int identificacaoTrabalhador;
         DateTime dtInicioContrato;
@@ -18,7 +18,18 @@ namespace TPBO
             dtInicioContrato = dtContrato;
         }
 
+        public int IdentificacaoTrabalhador
+        {
+            get { return identificacaoTrabalhador; }
+            set { identificacaoTrabalhador = value; }
+        }
 
+        public DateTime DataInicioContrato
+        {
+            get { return dtInicioContrato; }
+            set { dtInicioContrato = value; }
+        }
+        
         //Faltam properties
     }
 }
