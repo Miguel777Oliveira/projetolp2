@@ -20,13 +20,18 @@ namespace TPDL
             
             try
             {
-                //if ()
+               
                 gereTarefa.Add(t);
                 result = true;
             }
-            catch(Exception ex)
+            catch(ImposssivelAdicionarTarefa ex)
             {
                 msg = ex.Message;
+                result = false;
+            }
+            catch(NullReferenceException ex)
+            {
+                mensagem=ex.Message;
                 result = false;
             }
             mensagem = msg;
@@ -75,6 +80,30 @@ namespace TPDL
            
         }
         
+
+        public static bool AssociaUtilizadorATarefa(List<Trabalhador> trabalhadores, Tarefa tar, out string msg)
+        {
+            string output = String.Empty;
+            try
+            {
+
+                bool result = false;
+                if (gereTarefa.Contains(tar))
+                {
+                    tar.ConjuntoTrabalhador = trabalhadores;
+                    result = true;
+                }
+
+            }
+            catch(Exception ex)
+            {
+                
+                output=ex.Message;
+            }
+            msg=output;
+            return result;
+        }
+
 
     }
 }

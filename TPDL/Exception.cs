@@ -13,7 +13,7 @@ namespace TPDL
         }
     }
 
-    public class ImposssivelAdicionarTarefa : Exception
+    public class ImposssivelAdicionarTarefa : NullReferenceException
     {
         public ImposssivelAdicionarTarefa() : base("Não foi possivel adicionar tarefa")
         {

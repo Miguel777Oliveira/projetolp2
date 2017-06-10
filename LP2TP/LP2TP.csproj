@@ -49,6 +49,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -74,6 +75,16 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TPBO\TPBO.csproj">
+      <Project>{71B6DCCD-B0F6-4B3A-AC0D-117F95B98CC1}</Project>
+      <Name>TPBO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPDL\TPDL.csproj">
+      <Project>{41C33DB8-EA45-4C67-A37E-4CC479AF676C}</Project>
+      <Name>TPDL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
